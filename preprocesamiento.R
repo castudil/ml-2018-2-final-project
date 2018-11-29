@@ -90,3 +90,13 @@ dim(sindatosfaltantes)
 
 ##############   outliers   #########
 boxplot(norm)
+boxplot(norm$V16)
+v16<-norm$V16
+
+outliers<-norm[norm$V16 > 0.8,]
+outliers$V16
+which(norm$V16 < 0.8)
+#[1] 116 484
+norm[c(116,484),]
+
+boxplot(outliers$V16)
