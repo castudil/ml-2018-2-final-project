@@ -15,12 +15,44 @@ URL
 data <- read.csv(URL,
               header = FALSE)
 data
-dim(data)
 
-
-plot(data) # no es capaz de procesar la informacion porque son muchas dimensiones
+# STR muestra el tipo de atributo y luego als 10 primeras observaciones
 str(data) # resumen de atributos, dice algunos valores y los rangos
-data$V2
-x<-data[-c(1,2),]
-str(x)
+
+
+dim(data)
+#[1] 569  32
+
+#plot(data) # no es capaz de procesar la informacion porque son muchas dimensiones
+
+
+
+#como desordenar un dataframe
+#https://stackoverflow.com/questions/6422273/how-to-randomize-or-permute-a-dataframe-rowwise-and-columnwise
+# vamos a muestrar 10 instancias al azar
+s<-sample(1:569,size = 569, replace = FALSE)
+s
+#[1] 116 138 444   8 543 550 188 187 268  32
+desordenados<-data[s,]
+desordenados
+
+dim(desordenados)
+
+#seleccionamos 1 atributo
+desordenados[,1]
+#seleccionamos 2 atributos
+desordenados[,1:2]
+#eliminamos 1 atributos
+x<-desordenados[,-c(1,2)]
 dim(x)
+head(x)
+tail(x)
+str(x)
+#recuperando las categorias
+y<-desordenados[,2]
+## cual es la clase del objeto "y"
+class(y)
+#### podemos ver como los factores estan almacenados en la memoria
+as.numeric(y)
+
+
