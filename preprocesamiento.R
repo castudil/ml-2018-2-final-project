@@ -56,3 +56,37 @@ class(y)
 as.numeric(y)
 
 
+######################## normalizacion  ########
+
+str(x)
+
+norm <- as.data.frame(apply(x, 2, function(x) (x - min(x))/(max(x)-min(x))))
+
+norm
+summary(x)
+summary(norm)
+
+###################### datos faltantes #######
+
+install.packages("mlbench")
+library("mlbench")
+dim(BostonHousing)
+BostonHousing$rad
+head(BostonHousing$rad)
+
+BostonHousing[sample(1:nrow(BostonHousing), 40), "rad"] <- NA
+BostonHousing[sample(1:nrow(BostonHousing), 40), "ptratio"] <- NA
+
+
+
+is.na(BostonHousing$rad)
+is.na(BostonHousing$ptratio)
+which(is.na(BostonHousing$rad))
+
+sindatosfaltantes<-na.omit(BostonHousing)
+dim(sindatosfaltantes)
+#[1] 429  14
+#77/506
+
+##############   outliers   #########
+boxplot(norm)
