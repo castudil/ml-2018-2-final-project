@@ -1,0 +1,12 @@
+
+ML
+
+outlier detection. - LOF local outlier factor
+http://www.rdatamining.com/examples/outlier-detection
+https://www.r-bloggers.com/outlier-detection-and-treatment-with-r/
+Missing values, visualization.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4701517/
+Eliminación por correlaciones.
+	
+Metodologias de Data mining
+https://dzone.com/articles/machine-learning-in-a-box-week-2-project-methodolo-1
