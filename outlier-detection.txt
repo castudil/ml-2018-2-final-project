@@ -6,7 +6,21 @@ http://www.rdatamining.com/examples/outlier-detection
 https://www.r-bloggers.com/outlier-detection-and-treatment-with-r/
 Missing values, visualization.
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4701517/
+
 Eliminación por correlaciones.
-https://stackoverflow.com/questions/18275639/remove-highly-correlated-variables	
+
+library('caret')
+df1=iris[,1:4]
+df2 = cor(iris[,1:4])
+df2
+
+hc = findCorrelation(df2, cutoff=0.9) # putt any value as a "cutoff" 
+hc = sort(hc)
+hc
+reduced_Data = df1[,-c(hc)]
+reduced_Data
+head(reduced_Data)
+
+
 Metodologias de Data mining
 https://dzone.com/articles/machine-learning-in-a-box-week-2-project-methodolo-1
