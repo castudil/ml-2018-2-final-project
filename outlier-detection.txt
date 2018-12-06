@@ -7,6 +7,6 @@ https://www.r-bloggers.com/outlier-detection-and-treatment-with-r/
 Missing values, visualization.
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4701517/
 Eliminación por correlaciones.
-	
+https://stackoverflow.com/questions/18275639/remove-highly-correlated-variables	
 Metodologias de Data mining
 https://dzone.com/articles/machine-learning-in-a-box-week-2-project-methodolo-1
